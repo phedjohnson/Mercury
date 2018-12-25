@@ -1,0 +1,43 @@
+Author: Philip E. Johnson
+Date: December 2018
+Project Title: Mercury
+
+================================================================
+This code has been developed in the Windows 10 bash environment;
+it works well in that environment and on a typical Linux machine.
+It may also work well on Mac machines and in a traditional
+Windows programming environment, but I am not sure.
+
+This code is compiled with the GNU g++ compiler as follows:
+1) In the terminal, run the command:
+g++ -O3 Mercury.cpp -o exec.exe
+to compile the code with optimization.
+
+2) To run the executable, enter the following command:
+./exec.exe
+
+3) Once the code finishes running, the data needs to be
+reorganized for the Matlab plotting routine. Compile
+the code "ReorganizeData.cpp" and run its executable.
+
+4) There are two choices for flow visualization:
+i) Run the ViewEvolution_GeneralField.m file in
+Matlab. Edit the "field" variable
+to look at different aspects of the flow
+
+ii) In a python environment (I use the Spyder environment),
+run the progress_p.py code to view the progression
+of the pressure field.
+
+================================================================
+Some Notes:
+
+The initial condition for the flow is set in the U_init subroutine.
+You should set the t_final variable appropriately.
+
+The default geometry is a 2 x 1 rectangle. It is set by
+{LEFT, RIGHT, BASE, TOP} at the top of the code. Mx and My
+are the cell counts in the x and y directions, respectively.
+
+Larger cell counts will yield better-resolved simulations,
+but at increased cost.
